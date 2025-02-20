@@ -3,7 +3,7 @@ id: taira
 name: Taira
 type: shield
 url: https://github.com/strayer/tairakb/
-requires: [xiao_d]
+requires: [xiao_ble]
 features:
   - keys
 siblings:
