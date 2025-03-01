@@ -33,23 +33,23 @@
                 default_layer {
 /* QWERTY
  * .----------------------------------------------------------------------------------------------------------------------------------.
- * |  `   |   1  |   2  |   3  |   4  |   5  |                                              |   6  |   7  |   8  |   9  |   0  | PScr |
+ * | ESC  |   1  |   2  |   3  |   4  |   5  |                                              |   6  |   7  |   8  |   9  |   0  | BSPC |
  * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * | ESC  |   Q  |   W  |   E  |   R  |   T  |                                              |   Y  |   U  |   I  |   O  |   P  |  \   |
+ * | Tab  |   Q  |   W  |   E  |   R  |   T  |                                              |   Y  |   U  |   I  |   O  |   P  | BSLH |
  * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * | Tab  |   A  |   S  |   D  |   F  |   G  |                                              |   H  |   J  |   K  |   L  |   ;  |  '   |
+ * | HYPER|   A  |   S  |   D  |   F  |   G  |                                              |   H  |   J  |   K  |   L  |   ;  |  '   |
  * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  |      | Del  | Raise | | PGUP  | Home  |      |   N  |   M  |   ,  |   .  |   /  | Shift|
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |      | Del  | PGDN  | | PGUP  | Home  |      |   N  |   M  |   ,  |   .  |   /  | Shift/Enter|
  * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * |      |      |      |      |             | Meta | Space| Lower | | Raise | Enter | RAlt |             |      |      |      |      |
- * .----------------------------------------------------------------------------------------------------------------------------------.
+ *                                           | Meta | Space| Lower | | Raise |L Brkt |R Brkt|
+ *                                           |----------------------------------------------|
  */
                         bindings = <
-&kp  GRAVE    &kp  N1    &kp  N2     &kp  N3     &kp  N4    &kp  N5                                                                        &kp  N6  &kp  N7    &kp  N8     &kp  N9    &kp  N0       &kp  PSCRN
-&kp  TAB      &kp  Q     &kp  W      &kp  E      &kp  R     &kp  T                                                                         &kp  Y   &kp  U     &kp  I      &kp  O     &kp  P        &kp  BSLH
-&lt HYPER ESC &kp  A     &kp  S      &kp  D      &kp  F     &kp  G                                                                         &kp  H   &kp  J     &kp  K      &kp  L     &kp  SEMI     &kp  SQT
-&kp  LSHFT    &kp  Z     &kp  X      &kp  C      &kp  V     &kp  B             &kp  DEL    &mo  RAISE    &kp  PG_UP  &kp  HOME             &kp  N   &kp  M     &kp  COMMA  &kp  DOT   &kp  SLASH    &mt  RSHFT ENTER
-                                                                     &kp LMETA &kp  SPACE  &mo  LOWER    &mo  RAISE  &kp  BSPC &kp  RALT                       
+&mt  ESC             &kp  N1    &kp  N2     &kp  N3     &kp  N4    &kp  N5                                                                        &kp  N6  &kp  N7    &kp  N8     &kp  N9    &kp  N0       &kp  BSPC
+&kp  TAB             &kp  Q     &kp  W      &kp  E      &kp  R     &kp  T                                                                         &kp  Y   &kp  U     &kp  I      &kp  O     &kp  P        &kp  BSLH
+&lt  HYPER LC(SPACE) &kp  A     &kp  S      &kp  D      &kp  F     &kp  G                                                                         &kp  H   &kp  J     &kp  K      &kp  L     &kp  SEMI     &kp  SQT
+&kp  LSHFT           &kp  Z     &kp  X      &kp  C      &kp  V     &kp  B             &kp  DEL    &mo  PG_DN    &kp  PG_UP  &kp  HOME             &kp  N   &kp  M     &kp  COMMA  &kp  DOT   &kp  SLASH    &mt  SHIFT ENTER
+                                                                            &kp LMETA &kp  SPACE  &mo  LOWER    &mo  RAISE  &kp  LBKT &kp  RBKT                       
                         >;
                 };
 
@@ -138,10 +138,10 @@
  */
                         bindings = <
 &trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &none
-&trans        &trans     &kp LC(LS(LA(LG(W)))) &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &none
-&trans        &trans     &trans      &trans      &kp LC(LS(LA(LG(F)))) &trans                                                                         &kp LEFT &kp DOWN   &kp UP      &kp RIGHT  &trans        &none
-&trans        &trans     &trans      &trans      &trans      &trans             &trans      &trans        &trans      &trans                &trans   &trans     &trans      &trans     &trans        &none
-                                                  &trans    &kp LC(LS(LA(LG(SPACE))))       &trans        &trans      &trans    &trans                           
+&trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &none
+&trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &kp UP     &trans      &trans     &trans        &none
+&trans        &trans     &trans      &trans      &trans      &trans             &trans      &trans        &kp MINUS   &kp EQUAL             &kp LEFT &kp DOWN   &kp RIGHT   &trans     &trans        &none
+                                                                     &trans     &trans      &trans        &trans      &trans    &trans                           
                         >;
                 };
 
