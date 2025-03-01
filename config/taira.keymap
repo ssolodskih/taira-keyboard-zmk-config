@@ -17,6 +17,21 @@
 #define GAME    5
 
 / {
+        behaviors {
+            td0: tap_dance_0 {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp MINUS>, <&LBKT>;
+            };
+
+            td1: tap_dance_1 {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp EQUAL>, <&RBKT>;
+            };
+        };
 
         conditional_layers {
                 compatible = "zmk,conditional-layers";
@@ -49,7 +64,7 @@
 &kp  TAB             &kp  Q     &kp  W      &kp  E      &kp  R     &kp  T                                                                         &kp  Y   &kp  U     &kp  I      &kp  O     &kp  P        &kp  BSLH
 &lt  HYPER LC(SPACE) &kp  A     &kp  S      &kp  D      &kp  F     &kp  G                                                                         &kp  H   &kp  J     &kp  K      &kp  L     &kp  SEMI     &kp  SQT
 &kp  LSHFT           &kp  Z     &kp  X      &kp  C      &kp  V     &kp  B             &kp  DEL    &kp  BSPC     &kp  END    &kp  HOME             &kp  N   &kp  M     &kp  COMMA  &kp  DOT   &kp  SLASH    &mt  RSHFT ENTER
-                                                                           &mo  LOWER &kp  LMETA  &kp  SPACE    &kp  LBKT   &kp  RBKT   &mo  RAISE
+                                                                           &mo  LOWER &kp  LMETA  &kp  SPACE    &td0        &td1      &mo  RAISE
                         >;
                 };
 
