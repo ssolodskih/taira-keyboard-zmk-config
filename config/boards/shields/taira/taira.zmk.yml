@@ -6,6 +6,7 @@ url: https://github.com/strayer/tairakb/
 requires: [xiao_ble]
 features:
   - keys
+  - zmk studio
 siblings:
   - taira_left
   - taira_right
