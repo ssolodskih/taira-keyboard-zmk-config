@@ -45,11 +45,11 @@
  * .----------------------------------------------------------------------------------------------------------------------------------.
  */
                         bindings = <
-&kp  ESC             &kp  N1    &kp  N2     &kp  N3     &kp  N4    &kp  N5                                                                        &kp  N6  &kp  N7    &kp  N8     &kp  N9    &kp  N0       &kp  BSPC
+&kp  ESC             &kp  N1    &kp  N2     &kp  N3     &kp  N4    &kp  N5                                                                        &kp  N6  &kp  N7    &kp  N8     &kp  N9    &kp  N0       &kp  PG_UP
 &kp  TAB             &kp  Q     &kp  W      &kp  E      &kp  R     &kp  T                                                                         &kp  Y   &kp  U     &kp  I      &kp  O     &kp  P        &kp  BSLH
 &lt  HYPER LC(SPACE) &kp  A     &kp  S      &kp  D      &kp  F     &kp  G                                                                         &kp  H   &kp  J     &kp  K      &kp  L     &kp  SEMI     &kp  SQT
-&kp  LSHFT           &kp  Z     &kp  X      &kp  C      &kp  V     &kp  B             &kp  DEL    &kp  PG_DN    &kp  PG_UP  &kp  HOME             &kp  N   &kp  M     &kp  COMMA  &kp  DOT   &kp  SLASH    &mt  RSHFT ENTER
-                                                                            &kp LMETA &kp  SPACE  &mo  LOWER    &mo  RAISE  &kp  LBKT &kp  RBKT                       
+&kp  LSHFT           &kp  Z     &kp  X      &kp  C      &kp  V     &kp  B             &kp  DEL    &kp  BSPC     &kp  END    &kp  HOME             &kp  N   &kp  M     &kp  COMMA  &kp  DOT   &kp  SLASH    &mt  RSHFT ENTER
+                                                                           &mo  LOWER &kp  LMETA  &kp  SPACE    &kp  LBKT   &kp  RBKT   &mo  RAISE
                         >;
                 };
 
@@ -137,7 +137,7 @@
  * .----------------------------------------------------------------------------------------------------------------------------------.
  */
                         bindings = <
-&trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &none
+&trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &kp  PG_DN
 &trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &none
 &trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &kp UP     &trans      &trans     &trans        &none
 &trans        &trans     &trans      &trans      &trans      &trans             &trans      &trans        &kp MINUS   &kp EQUAL             &kp LEFT &kp DOWN   &kp RIGHT   &trans     &trans        &none
