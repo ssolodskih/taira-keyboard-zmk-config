@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "taira_layouts.dtsi"
+#include "taira-layouts.dtsi"
 
 &physical_layout0 {
     transform = <&matrix_transform>;
